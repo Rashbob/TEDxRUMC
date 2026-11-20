@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>TEDxRUMC — Coming Soon</title>
+<meta name="description" content="TEDx is coming to RUMC.">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#000000" media="(prefers-color-scheme: dark)">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #ffffff;
+  --fg: #0b0b0b;
+  --red: #EB0028;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #000000;
+    --fg: #ffffff;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #000000;
+  --fg: #ffffff;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg);
+  color: var(--fg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
+  border-top: 5px solid var(--red);
+  padding: max(clamp(24px, 6vw, 64px), env(safe-area-inset-top, 0px))
+           max(clamp(20px, 5vw, 64px), env(safe-area-inset-right, 0px))
+           max(clamp(24px, 6vw, 64px), env(safe-area-inset-bottom, 0px))
+           max(clamp(20px, 5vw, 64px), env(safe-area-inset-left, 0px));
+  -webkit-font-smoothing: antialiased;
+}
+main {
+  width: 100%;
+  max-width: 1100px;
+  text-align: center;
+}
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 9.5vw, 7.5rem);
+  font-weight: 800;
+  line-height: 1.06;
+  letter-spacing: -0.025em;
+  text-wrap: balance;
+}
+h1::after {
+  content: "";
+  display: block;
+  width: clamp(56px, 8vw, 96px);
+  height: 5px;
+  background: var(--red);
+  border-radius: 999px;
+  margin: clamp(24px, 3.5vw, 40px) auto 0;
+}
+.tedx {
+  color: var(--red);
+  letter-spacing: 0;
+  white-space: nowrap;
+}
+.rumc {
+  white-space: nowrap;
+}
+</style>
+</head>
+<body>
+  <main>
+    <h1><span class="tedx">TEDx</span> is coming to <span class="rumc">RUMC</span></h1>
+  </main>
+</body>
+</html>
